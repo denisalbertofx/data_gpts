@@ -1,1 +1,1 @@
-export function answer(){return "east|user-D1|none|present";}
+export function answer(){return "west|user-D1|none|present";}
