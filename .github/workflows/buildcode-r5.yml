@@ -1,0 +1,16 @@
+name: buildcode-r5
+on:
+  pull_request:
+    branches: ['buildcode-r5/base-*']
+permissions:
+  contents: read
+jobs:
+  contrato:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+      - name: Contrato de cuatro campos
+        run: node ci/check.mjs
